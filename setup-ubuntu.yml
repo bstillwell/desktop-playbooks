@@ -4,11 +4,7 @@
 
   tasks:
     - include: tasks/chrome.yml
+    - include: tasks/gui-apps.yml
 
-# Install gimp
-# Install inkscape
-# Install virtualbox
-# Install vagrant
-# Install vlc
 # Install optipng, jpegoptim
 # Move dock to bottom
