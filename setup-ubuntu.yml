@@ -1,0 +1,14 @@
+---
+- hosts: all
+  connection: local
+
+  tasks:
+    - include: tasks/chrome.yml
+
+# Install gimp
+# Install inkscape
+# Install virtualbox
+# Install vagrant
+# Install vlc
+# Install optipng, jpegoptim
+# Move dock to bottom
