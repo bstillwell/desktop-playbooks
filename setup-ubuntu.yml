@@ -3,8 +3,7 @@
   connection: local
 
   tasks:
-    - include: tasks/chrome.yml
-    - include: tasks/gui-apps.yml
-
-# Install optipng, jpegoptim
-# Move dock to bottom
+    - { include: tasks/chrome.yml, become: yes }
+    - { include: tasks/gui-apps.yml, become: yes }
+    - { include: tasks/cli-apps.yml, become: yes }
+    - include: tasks/unity.yml

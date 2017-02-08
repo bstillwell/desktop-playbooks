@@ -1,0 +1,8 @@
+---
+- name: Get the current location for the Unity launcher
+  command: 'gsettings get com.canonical.Unity.Launcher launcher-position'
+  register: launcher_position
+
+- name: Move the Unity launcher to the bottom of the screen
+  command: 'gsettings set com.canonical.Unity.Launcher launcher-position Bottom'
+  when: launcher_position != "'Bottom'"

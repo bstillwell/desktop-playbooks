@@ -1,0 +1,6 @@
+---
+- name: Install CLI apps
+  apt: pkg={{ item }} update_cache=yes state=latest
+  with_items:
+   - optipng
+   - jpegoptim
