@@ -2,5 +2,11 @@
 - name: Install CLI apps
   apt: pkg={{ item }} update_cache=yes state=latest
   with_items:
+   - vim
    - optipng
    - jpegoptim
+
+- name: Remove CLI apps
+  apt: pkg={{ item }} state=absent
+  with_items:
+   - nano
